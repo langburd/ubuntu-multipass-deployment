@@ -1,0 +1,18 @@
+---
+# config.yaml
+# This file contains the configuration for the multipass instances
+gh_name: langburd # Use your GitHub username
+windows_switch_name: MultipassExternalSwitch # Name of the switch to use for the Windows VM
+instances:
+  - name: pihole1
+    ip: 192.168.8.53/23
+    gateway: 192.168.8.1
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+  - name: pihole2
+    ip: 192.168.8.153/23
+    gateway: 192.168.8.1
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
