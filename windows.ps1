@@ -5,7 +5,7 @@
 .DESCRIPTION
     This script reads configuration variables from a YAML file named "config.yaml" located in the same directory as the script.
     The configuration file contains:
-      - gh_name: GitHub username for SSH key import.
+      - git_username: GitHub username for SSH key import.
       - windows_switch_name: The name of the Hyper-V virtual switch to use.
       - instances: A list of instance configurations (name, static IP, gateway, and DNS servers).
 
@@ -34,7 +34,7 @@
 
 .SAMPLE config.yaml
     ---
-    gh_name: langburd
+    git_username: langburd
     windows_switch_name: MultipassExternalSwitch
     instances:
       - name: pihole1
@@ -66,7 +66,7 @@ if (-not (Test-Path $configPath)) {
 $config = Get-Content $configPath -Raw | ConvertFrom-Yaml
 
 # Extract configuration variables
-$ghName    = $config.gh_name
+$ghName    = $config.git_username
 $SwitchName = $config.windows_switch_name
 $instances  = $config.instances
 
