@@ -8,18 +8,18 @@ windows_switch_name: MultipassExternalSwitch # Name of the switch to use for the
 ssh_key: /Users/avi.langburd/.ssh/ubuntu
 ssh_key_pub: /Users/avi.langburd/.ssh/ubuntu.pub
 instances:
-  # - name: pihole1
-  #   ip: 192.168.8.53/23
-  #   gateway: 192.168.8.1
-  #   dns:
-  #     - 8.8.8.8
-  #     - 8.8.4.4
-  # - name: pihole2
-  #   ip: 192.168.8.153/23
-  #   gateway: 192.168.8.1
-  #   dns:
-  #     - 8.8.8.8
-  #     - 8.8.4.4
+  - name: pihole1
+    ip: 192.168.8.53/23
+    gateway: 192.168.8.1
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+  - name: pihole2
+    ip: 192.168.8.153/23
+    gateway: 192.168.8.1
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
   - name: pihole3
     ip: 192.168.9.153/23
     gateway: 192.168.8.1
